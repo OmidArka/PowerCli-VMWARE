@@ -1,0 +1,19 @@
+برای نصب PowerCLI VMware در ویندوز ۱۱، مراحل زیر را دنبال کنید:
+
+ نصب ماژول PowerCLI
+Install-Module -Name VMware.PowerCLI -Scope AllUsers
+
+تأیید نصب
+Get-Module -Name VMware.PowerCLI -ListAvailable
+
+به‌روزرسانی ماژول PowerCLI
+Update-Module -Name VMware.PowerCLI
+
+ شروع کار با PowerCLI
+Connect-VIServer -Server <vCenter_or_ESXi_IP> -User <username> -Password <password>
+
+تست اتصال
+Get-VM
+
+خروجی از سرور
+Disconnect-VIServer -Confirm:$false
